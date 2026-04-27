@@ -17,12 +17,9 @@ const config = defineConfig({
   },
   plugins: [
     devtools(),
-    nitro(),
-    workflow(),
-    // this is the plugin that enables path aliases
-    viteTsConfigPaths({
-      projects: ["./tsconfig.json"],
-    }),
+    nitro({ preset: "vercel" }),
+    workflow({ runtime: "nodejs24.x" }),
+    viteTsConfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
     tanstackStart(),
     viteReact(),

@@ -1,6 +1,6 @@
 import sharp from "sharp";
 
-import type { Result } from "./sharp";
+import type { Result } from "@/workflows/sharp";
 
 export async function sharpRegular(): Promise<Result> {
   try {
